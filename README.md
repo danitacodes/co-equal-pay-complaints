@@ -7,3 +7,5 @@ job description and wage rate records.
 
 This web application creates a web-based form to allow people to submit
 complaints.
+
+Learn more about the Colorado Equal Pay for Equal Work Act [here](https://cdle.colorado.gov/equalpaytransparency).
