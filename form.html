@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Pay Equity</title>
+</head>
 <body>
-
-  <h1>Equal Pay for Equal Work Act, Part 2 Complaint Form</h1>
+  <div class="container">
+    <h1>Equal Pay for Equal Work Act, Part 2 Complaint Form</h1>
 
   <p>
     Effective on and after January 1, 2021, Part 2 of the Equal Pay for Equal Work Act, C.R.S. § 8-5-101 et seq., requires all Colorado employers to 1) notify all current employees of all opportunities for promotion in advance of making a promotion or hiring decision; 2) disclose compensation and benefits for the advertised position in all job postings, including when notifying employees of a promotional opportunity; and 3) keep records of every employee’s job description and wage rate history until two years after the end of the employee’s employment.
@@ -13,64 +20,77 @@
   </p>
 
   <form action="/generate_pdf" method="post" id="usrform">
-    <h2>Section I: Complainant Contact Information (To file anonymously, skip to Section II)</h2>
+    <section class="sectionOne">
+      <h2>Section I: Complainant Contact Information (To file anonymously, skip to Section II)</h2>
     First Name: <input type="text" name="firstname">
-    Last Name: <input type="text" name="lastname">
-    Mailing Address: <input type="text" name="address">
+    Last Name: <input type="text" name="lastname"><br>
+    Mailing Address: <input type="text" name="address"><br>
     City: <input type="text" name="city">
-    State: <input type="text" name="state">
-    Zip Code: <input type="text" name="zipcode">
-    Primary Phone: <input type="text" name="primary_phone">
-    Alternate Phone: <input type="text" name="alt_phone">
-    Email Address: <input type="text" name="email">
+    State: <input type="text" name="state"><br>
+    Zip Code: <input type="text" name="zipcode"><br>
+    Primary Phone: <input type="text" name="primary_phone"><br>
+    Alternate Phone: <input type="text" name="alt_phone"><br>
+    Email Address: <input type="text" name="email"><br>
     Preferred Contact Method: <input type="text" name="pref_contact_method">
-
-    <h2>Section II: Employer Contact Inforamtion - Complete this section to the best of your knowledge. Missing information or incomplete formst may delay the complaint process</h2>
-    Employer Name: <input type="text" name="employer_name">
-    Employer Contact Person Name: <input type="text" name="employer_contact_name">
-    Employer Mailing Address: <input type="text" name="employer_address">
-    City: <input type="text" name="employer_city">
-    State: <input type="text" name="employer_state">
-    Zip Code: <input type="text" name="employer_zipcode">
-    Employer Phone Number: <input type="text" name="employer_phone">
-    Employer Website: <input type="text" name="employer_website">
-
-    <h2>Section III: Description of the Alleged Equal Pay for Equal Work Act, Part 2 Violation (Please check and complete the boxes that apply and provide an explanation of what happened)</h2>
-    1. Did the employer fail to notify all current employees of a promotional opportunity (C.R.S §8-5-201(1)), including a failure to include all required information in a notice or failure toprovide the notice in time for employees to apply for the position?
+    </section>
+    
+    <section class="sectionTwo">
+      <h2>Section II: Employer Contact Information - Complete this section to the best of your knowledge. Missing information or incomplete forms may delay the complaint process</h2>
+      Employer Name: <input type="text" name="employer_name"><br>
+      Employer Contact Person Name: <input type="text" name="employer_contact_name"><br>
+      Employer Mailing Address: <input type="text" name="employer_address"><br>
+      City: <input type="text" name="employer_city">
+      State: <input type="text" name="employer_state"><br>
+      Zip Code: <input type="text" name="employer_zipcode"><br>
+      Employer Phone Number: <input type="text" name="employer_phone"><br>
+      Employer Website: <input type="text" name="employer_website">
+    </section>
+  
+    <section class="sectionThree">
+      <h2>Section III: Description of the Alleged Equal Pay for Equal Work Act, Part 2 Violation (Please check and complete the boxes that apply and provide an explanation of what happened)</h2>
+    1. Did the employer fail to notify all current employees of a promotional opportunity (C.R.S §8-5-201(1)), including a failure to include all required information in a notice or failure toprovide the notice in time for employees to apply for the position?<br>
      <input type="radio" id="yes" name="notify" value="Yes">
-     <label for="html">Yes</label><br>
+     <label for="html">Yes</label>
      <input type="radio" id="no" name="notify" value="No">
      <label for="css">No</label><br>
     <textarea rows="4" cols="50" name="failed_to_notify_explain" form="usrform">
-      If yes, please explain.</textarea>
+      If yes, please explain.</textarea><br>
 
-    2. Did the employer fail to include compensation and a description of benefits in a job posting(C.R.S § 8-5-201(2)), including a failure to provide an accurate and position-specificcompensation and benefits description?
+    2. Did the employer fail to include compensation and a description of benefits in a job posting(C.R.S § 8-5-201(2)), including a failure to provide an accurate and position-specificcompensation and benefits description?<br>
     <input type="radio" id="yes" name="comp" value="Yes">
-     <label for="html">Yes</label><br>
+     <label for="html">Yes</label>
      <input type="radio" id="no" name="comp" value="No">
      <label for="css">No</label><br>
     <textarea rows="4" cols="50" name="failed_to_include_comp" form="usrform">
-      If yes, please explain.</textarea>
+      If yes, please explain.</textarea><br>
 
-    3. Did the employer fail to keep records of employee job description and wage history for atleast two years after an employee’s employment (C.R.S § 8-5-202)?
+    3. Did the employer fail to keep records of employee job description and wage history for atleast two years after an employee’s employment (C.R.S § 8-5-202)?<br>
     <input type="radio" id="yes" name="history" value="Yes">
-     <label for="html">Yes</label><br>
+     <label for="html">Yes</label>
      <input type="radio" id="no" name="history" value="No">
      <label for="css">No</label><br>
     <textarea rows="4" cols="50" name="failed_to_keep_history" form="usrform">
       If yes, please explain.</textarea>
-
-    <h2> Section IV: Supporting Documentation (Please attach to the complaint form)</h2>
-    You should provide the Division with relevant documentation to support your complaint by attaching it to this complaint form. Supporting documentation may include a copy, photo, or screenshot of a non-compliant job posting or notice of promotional opportunity; correspondence with your employer or others concerning a promotional opportunity, hire, or promotion; and/or correspondence with your employer or others concerning employee records.
-    If you do not have supporting documentation, describe in detail any additional information for your allegation that this employer has violated Part 2 of the Equal Pay for Equal Work Act:
-    <h3>TBD - add ability to uplaod files</h3>
-
-    <h2>To the best of my knowledge, I affirm that the information I have provided is true and correct:</h2>
+    </section>
+    
+    <section class="sectionFour">
+      <h2> Section IV: Supporting Documentation (Please attach to the complaint form)</h2>
+            You should provide the Division with relevant documentation to support your complaint by attaching it to this complaint form. Supporting documentation may include a copy, photo, or screenshot of a non-compliant job posting or notice of promotional opportunity; correspondence with your employer or others concerning a promotional opportunity, hire, or promotion; and/or correspondence with your employer or others concerning employee records.
+            If you do not have supporting documentation, describe in detail any additional information for your allegation that this employer has violated Part 2 of the Equal Pay for Equal Work Act:
+      <h3>TBD - add ability to upload files</h3>
+    </section>
+    
+    <section class="sectionFive">
+      <h2>To the best of my knowledge, I affirm that the information I have provided is true and correct:</h2>
     Name: <input type="text" name="typed_name">
-    Signature: <input type="text" name="signature">
+    Signature: <input type="text" name="signature"><br>
     Date: <input type="text" name="date">
-  <input value="Generate PDF" type="submit" />
+    </section>
+    
+  <input class="btn" value="Generate PDF" type="submit" />
+  <br>
 </form>
+  </div>
+  
 <br>
 </body>
-</html>
